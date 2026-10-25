@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday, My Love ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sky" aria-hidden="true"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<div id="fx" aria-hidden="true"></div>
+<canvas id="roses" aria-hidden="true"></canvas>
+
+<main id="landing" class="screen on">
+  <h1 id="title"></h1>
+  <p id="subtitle" class="sub"></p>
+  <button id="open" class="big" type="button">Click for Your Surprise</button>
+  <p class="hint">Something special is waiting for you…</p>
+  <p id="date" class="hint"></p>
+</main>
+
+<section id="show" class="screen" aria-live="polite">
+  <div class="scene" id="s0"><p id="introText" class="type intro"></p></div>
+  <div class="scene" id="s1"><div class="beat"><svg viewBox="-.9 -.9 1.8 1.9"><defs><radialGradient id="hg" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#ff9ec0"/><stop offset=".55" stop-color="#e3195f"/><stop offset="1" stop-color="#6e0a36"/></radialGradient></defs><path d="M0 -.35C-.1 -.75 -.75 -.7 -.75 -.2C-.75 .25 -.2 .5 0 .85C.2 .5 .75 .25 .75 -.2C.75 -.7 .1 -.75 0 -.35Z" fill="url(#hg)"/><ellipse cx="-.38" cy="-.4" rx=".2" ry=".1" fill="#fff" opacity=".5" transform="rotate(-35 -.38 -.4)"/></svg></div></div>
+  <div class="scene" id="s2">
+    <div class="frame"><svg class="crown" viewBox="0 0 64 48"><defs><linearGradient id="gd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3b0"/><stop offset=".5" stop-color="#f2b632"/><stop offset="1" stop-color="#a86b0c"/></linearGradient></defs><path d="M4 40L10 10L24 26L32 4L40 26L54 10L60 40Z" fill="url(#gd)"/><rect x="4" y="38" width="56" height="7" rx="3" fill="url(#gd)"/><circle cx="10" cy="9" r="3" fill="#ff5c8a"/><circle cx="32" cy="3" r="3.5" fill="#7fd6ff"/><circle cx="54" cy="9" r="3" fill="#ff5c8a"/></svg><div class="pw"><img id="photo" alt="Birthday photo"></div></div>
+    <p id="photoText" class="sub"></p>
+    <p id="placeholderNote" class="note" hidden>Sample placeholder — add her real photo with “Add photo”.</p>
+  </div>
+  <div class="scene" id="s3">
+    <svg width="0" height="0" style="position:absolute"><defs><radialGradient id="bs" cx=".35" cy=".25" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".7"/><stop offset=".25" stop-color="#fff" stop-opacity="0"/><stop offset=".7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".4"/></radialGradient></defs></svg><div class="balloons"><i><svg viewBox="0 0 60 100" style="color:#ff4f8b"><ellipse cx="30" cy="34" rx="26" ry="32" fill="currentColor"/><ellipse cx="30" cy="34" rx="26" ry="32" fill="url(#bs)"/><path d="M30 66l-4 7h8z" fill="currentColor"/><path d="M30 73c-6 10 6 16 0 26" stroke="#fff8" fill="none"/></svg></i><i><svg viewBox="0 0 60 100" style="color:#b06cff"><ellipse cx="30" cy="34" rx="26" ry="32" fill="currentColor"/><ellipse cx="30" cy="34" rx="26" ry="32" fill="url(#bs)"/><path d="M30 66l-4 7h8z" fill="currentColor"/><path d="M30 73c-6 10 6 16 0 26" stroke="#fff8" fill="none"/></svg></i><i><svg viewBox="0 0 60 100" style="color:#ffcf5c"><ellipse cx="30" cy="34" rx="26" ry="32" fill="currentColor"/><ellipse cx="30" cy="34" rx="26" ry="32" fill="url(#bs)"/><path d="M30 66l-4 7h8z" fill="currentColor"/><path d="M30 73c-6 10 6 16 0 26" stroke="#fff8" fill="none"/></svg></i><i><svg viewBox="0 0 60 100" style="color:#5cc8ff"><ellipse cx="30" cy="34" rx="26" ry="32" fill="currentColor"/><ellipse cx="30" cy="34" rx="26" ry="32" fill="url(#bs)"/><path d="M30 66l-4 7h8z" fill="currentColor"/><path d="M30 73c-6 10 6 16 0 26" stroke="#fff8" fill="none"/></svg></i></div>
+    <div class="cake" role="img" aria-label="Birthday cake with candles">
+      <div class="candles"><b></b><b></b><b></b></div>
+      <div class="tier t1"></div><div class="tier t2"></div>
+    </div>
+    <p class="sub">Make a wish…</p>
+  </div>
+  <div class="scene" id="s4"><p id="wish" class="type"></p></div>
+  <div class="scene" id="s5">
+    <p id="letter" class="letter"></p>
+    <h2 id="final"></h2>
+    <button id="replay" class="big small" type="button">Play Again</button>
+  </div>
+</section>
+
+<div id="bar" role="toolbar" aria-label="Controls">
+  <button id="mute" type="button" aria-label="Mute or unmute music">Sound</button>
+  <input id="vol" type="range" min="0" max="1" step="0.05" value="0.6" aria-label="Volume">
+  <label class="btn" for="pick">Add photo<input id="pick" type="file" accept="image/*" multiple hidden></label>
+  <button id="fs" type="button" aria-label="Fullscreen">Full screen</button>
+</div>
+<p id="musicNote" class="note" hidden>No music file found — add assets/birthday-song.mp3.</p>
+
+<audio id="music" src="assets/birthday-song.mp3" loop preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>
